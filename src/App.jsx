@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Movies from './components/Movies';
-import Contact from './components/Contact';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Movies from './Pages/Movies';
+import Contact from './Pages/Contact';
 
 function App() {
 

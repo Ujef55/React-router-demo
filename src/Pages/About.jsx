@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Movies() {
+function About() {
     return (
         <h1>This is movie cards page</h1>
     )
 }
 
-export default Movies;
+export default About;

@@ -2,8 +2,9 @@ import { useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
-import Logo from '../../assets/logo.png'
+import Logo from '../../../assets/logo.png';
 import { motion, AnimatePresence } from "framer-motion";
+import AnimatedNavLink from "./AnimatedNavLinks";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,12 +13,6 @@ function Header() {
         setIsOpen(!isOpen);
     };
 
-    const navItems = [
-        { name: "Home", href: "#", isActive: true },
-        { name: "Services", href: "#", isActive: false },
-        { name: "About", href: "#", isActive: false },
-        { name: "Contact", href: "#", isActive: false },
-    ];
 
     return (
         <header className="bg-[#FFFF] text-slate-800">
@@ -44,26 +39,10 @@ function Header() {
                     </motion.div>
 
                     <nav className="hidden md:flex space-x-6">
-                        {navItems.map((item, index) => (
-                            <motion.a
-                                key={item.name}
-                                href={item.href}
-                                className={`${item.isActive ? 'text-orange-500' : 'hover:text-orange-500'} relative`}
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                {item.name}
-                                {item.isActive && (
-                                    <motion.span
-                                        className="absolute bottom-0 left-0 w-full h-0.5 bg-orange-500"
-                                        layoutId="underline"
-                                    />
-                                )}
-                            </motion.a>
-                        ))}
+                        <AnimatedNavLink to='/'>Home</AnimatedNavLink>
+                        <AnimatedNavLink to='/services'>Services</AnimatedNavLink>
+                        <AnimatedNavLink to='/about'>About</AnimatedNavLink>
+                        <AnimatedNavLink to='/contact'>Contact</AnimatedNavLink>
                     </nav>
 
                     <motion.div
@@ -112,19 +91,10 @@ function Header() {
                         transition={{ duration: 0.3 }}
                     >
                         <nav className="flex flex-col space-y-2 p-4">
-                            {navItems.map((item, index) => (
-                                <motion.a
-                                    key={item.name}
-                                    href={item.href}
-                                    className={`${item.isActive ? 'text-orange-500' : 'hover:text-orange-500'}`}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                                    whileHover={{ x: 10 }}
-                                >
-                                    {item.name}
-                                </motion.a>
-                            ))}
+                            <AnimatedNavLink to='/'>Home</AnimatedNavLink>
+                            <AnimatedNavLink to='/services'>Services</AnimatedNavLink>
+                            <AnimatedNavLink to='/about'>About</AnimatedNavLink>
+                            <AnimatedNavLink to='/contact'>Contact</AnimatedNavLink>
                             <motion.div
                                 className="flex items-center space-x-6 mt-4"
                                 initial={{ opacity: 0, y: 20 }}

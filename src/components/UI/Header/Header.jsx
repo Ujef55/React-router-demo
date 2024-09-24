@@ -2,7 +2,6 @@ import { useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
-import Logo from '../../../assets/logo.png';
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedNavLink from "./AnimatedNavLinks";
 
@@ -35,7 +34,7 @@ function Header() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <img src={Logo} alt="Logo" className="h-10 mr-2" />
+                        <p className="text-orange-500 uppercase font-extrabold underline">Thread</p>
                     </motion.div>
 
                     <nav className="hidden md:flex space-x-6">

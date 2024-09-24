@@ -3,6 +3,7 @@ import Home from './Pages/Home';
 import About from './Pages/Services';
 import Services from './Pages/About';
 import Contact from './Pages/Contact';
+import Error from './Pages/Error';
 import AppLayout from './components/Layout/AppLayout';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     {
       path: '/',
       element: <AppLayout />,
+      errorElement: <Error />,
       children: [
         {
           path: '/',

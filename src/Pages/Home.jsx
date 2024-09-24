@@ -1,8 +1,12 @@
-import React from 'react'
+import Herocarousel from "../components/UI/Hero-section/HeroCarousel";
+import HeroAboutUs from "../components/UI/Hero-section/HeroAboutUs";
 
 function Home() {
     return (
-        <h1>This is Home Page</h1>
+        <>
+            <Herocarousel />
+            <HeroAboutUs />
+        </>
     )
 }
 

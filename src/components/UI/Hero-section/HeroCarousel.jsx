@@ -7,7 +7,7 @@ import Img3 from '../../../assets/HeroCarousel/img-3.jpg';
 
 const HerocarouselContent = [
     {
-        welcome: "Welcome to Thread",
+        welcome: "Welcome to Real honest textile",
         title: "We have a great time during the process as well",
         image: Img1
     },

@@ -34,7 +34,8 @@ function Header() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <p className="text-orange-500 uppercase font-extrabold underline">Thread</p>
+                        <p className="text-orange-500 uppercase font-extrabold underline text-center sm:text-left">Real Honest Textile</p>
+
                     </motion.div>
 
                     <nav className="hidden md:flex space-x-6">
